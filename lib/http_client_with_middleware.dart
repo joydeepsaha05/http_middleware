@@ -1,12 +1,14 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
+
 import 'package:collection/collection.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:http_middleware/http_methods.dart';
 import 'package:http_middleware/models/request_data.dart';
 import 'package:http_middleware/models/response_data.dart';
+
 import 'middleware_contract.dart';
 
 ///Class to be used by the user to set up a new `http.Client` with middleware supported.
@@ -37,7 +39,7 @@ class HttpClientWithMiddleware extends http.BaseClient {
   List<MiddlewareContract> middlewares;
   Duration requestTimeout;
 
-  final IOClient _client = IOClient();
+  final Client _client = Client();
 
   HttpClientWithMiddleware._internal({this.middlewares, this.requestTimeout});
 
