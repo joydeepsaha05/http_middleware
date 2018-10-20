@@ -1,5 +1,6 @@
 name: http_middleware
 description: A middleware library for Dart http library.
+version: 1.0.1
 
 dependencies:
   http: "^0.12.0"
